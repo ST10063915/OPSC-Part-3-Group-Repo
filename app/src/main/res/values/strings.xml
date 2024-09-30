@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">One Second App</string>
+    <string name="login_button">Login with SSO</string>
+    <string name="enable_notifications">Enable Notifications</string>
+    <string name="change_language">Change Language</string>
+    <string name="save">Save</string>
+    <string name="logout">Logout</string>
+</resources>

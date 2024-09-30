@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/register">
+
+    <Button
+        android:id="@+id/loginTextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="287dp"
+        android:layout_marginLeft="230dp"
+        android:background="@android:color/transparent"
+        android:text="Login"
+        android:textColor="#9584ff"
+        android:textSize="13sp" />
+
+
+    <EditText
+        android:id="@+id/usernameEditText"
+        android:layout_below="@id/loginTextButton"
+        android:layout_width="330dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="16sp"
+        android:paddingLeft="16dp"
+        android:paddingTop="10dp"
+        android:backgroundTint="@android:color/white"
+        android:hint="Username"
+        android:textColor="@android:color/black" />
+
+    <EditText
+        android:id="@+id/emailEditText"
+        android:hint="Email"
+        android:backgroundTint="@android:color/white"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/usernameEditText"
+        android:layout_width="330dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="16sp"
+        android:paddingLeft="16dp"
+        android:paddingTop="10dp" />
+
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:backgroundTint="@android:color/white"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/emailEditText"
+        android:layout_width="330dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="16sp"
+        android:paddingLeft="16dp"
+        android:paddingTop="10dp" />
+
+
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Register"
+        android:textColor="@android:color/white"
+        android:background="@drawable/rounded_button"
+        android:layout_below="@id/passwordEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        />
+
+</RelativeLayout>

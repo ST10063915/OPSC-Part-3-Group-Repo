@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/login">
+
+
+    <Button
+        android:id="@+id/registerButton"
+        android:text="Register"
+        android:textSize="10dp"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/rounded_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="290dp" />
+
+
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_below="@id/registerButton"
+        android:layout_width="330dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="16sp"
+        android:paddingLeft="16dp"
+        android:paddingTop="10dp"
+        android:backgroundTint="@android:color/white"
+        android:hint="Email"
+        android:textColor="@android:color/black" />
+
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_below="@id/emailEditText"
+        android:layout_width="330dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="16sp"
+        android:paddingLeft="16dp"
+        android:paddingTop="10dp"
+        android:backgroundTint="@android:color/white"
+        android:hint="Password"
+        android:textColor="@android:color/black" />
+
+
+    <Button
+        android:id="@+id/loginButton"
+        android:textSize="10dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/rounded_button"
+        android:text="Login"
+        android:layout_below="@id/passwordEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp" />
+
+
+    <Button
+        android:id="@+id/googleSSOButton"
+        android:textSize="10dp"
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/rounded_button"
+        android:text="Login with SSO"
+        android:layout_below="@id/loginButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+
+
+</RelativeLayout>

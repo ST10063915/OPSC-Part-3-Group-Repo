@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "509456998795",
+    "project_id": "onesecondapp-34b5d",
+    "storage_bucket": "onesecondapp-34b5d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:509456998795:android:6bb88d3d95a3287bd0cf8e",
+        "android_client_info": {
+          "package_name": "com.opsc.onesecondapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "509456998795-c7thd54tla672tanvfnf5di762nurjmh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfM5uAsDrwpMGPs4dlbdktqbngrbIn1vw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "509456998795-c7thd54tla672tanvfnf5di762nurjmh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
