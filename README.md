@@ -176,6 +176,9 @@ You can test logging in and registering through the app’s SSO or email/passwor
 - **Gamification:**
   Implement achievements and badges for consistent journaling.
 
+- **UI Responsiveness:**
+  Implement a responsive and adaptable design to allow multiple devices
+
 ---
 
 ## **Demonstration Video (must contain voice over)**
