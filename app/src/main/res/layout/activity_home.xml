@@ -412,6 +412,354 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/changeProfileBannerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/banner_background"
+        android:elevation="4dp"
+        android:visibility="gone">
+
+
+        <!-- Change Profile Image -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/profile_icon"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/changeProfileImageText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Change Profile Image"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_marginTop="8dp" />
+
+        <!-- Change Username -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/username_icon"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/changeUsernameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change Username"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+
+        <!-- Change Email -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/email_icon"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/changeEmailText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change Email"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/helpCenterBannerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/banner_background"
+        android:elevation="4dp"
+        android:visibility="gone">
+
+        <!-- FAQ Header -->
+        <TextView
+            android:id="@+id/faqText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FAQ"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="16dp" />
+
+        <!-- Upload Media -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/uploadMediaText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Upload Media"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+
+        <!-- Import Media -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:id="@+id/importMediaText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Import Media"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+
+        <!-- Backup and Restore -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:id="@+id/backupRestoreText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Backup and Restore"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+
+        <!-- Account -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:id="@+id/accountText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Account"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/contactSupportBannerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/banner_background"
+        android:elevation="4dp"
+        android:visibility="gone">
+
+        <!-- Contact Us Header -->
+        <TextView
+            android:id="@+id/contactUsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact Us"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="16dp" />
+
+        <!-- Phone Number -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/phoneNumberText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone: +1-123-456-7890"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:clickable="false"
+                android:focusable="false" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+
+        <!-- Email Address -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:id="@+id/emailAddressText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email: onesecond@gmail.com"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:clickable="false"
+                android:focusable="false" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/dynamicBannerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/banner_background"
+        android:elevation="4dp"
+        android:visibility="gone">
+    </LinearLayout>
+
+
+
+
 
 
     <androidx.recyclerview.widget.RecyclerView

@@ -1,4 +1,5 @@
 # **One Second App**
+Please see https://github.com/VCDN-2024/opsc7312-part-2-ST10063915/tree/master for full version and github automated testing and workflows
 
 ## **Overview**
 **One Second App** is a multimedia journaling application designed to help users capture their daily moments through images, text, and videos. The app compiles these moments into a visually engaging timeline, providing a unique and personalized journaling experience. Users can capture photos, videos, and text entries, which are organized by date and accessible in a timeline view. The app offers features like offline mode with sync, multilingual support (English and Afrikaans), biometric authentication, and more.
