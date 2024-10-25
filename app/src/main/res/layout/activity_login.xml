@@ -49,15 +49,13 @@
 
     <Button
         android:id="@+id/biometricLoginButton"
-        android:textSize="10dp"
-        android:layout_width="150dp"
-        android:layout_height="35dp"
-        android:textColor="@android:color/white"
-        android:background="@drawable/rounded_button"
-        android:text="Login with Biometrics"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:background="@android:color/transparent"
         android:layout_below="@id/passwordEditText"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp" />
+        android:layout_marginTop="60dp"
+        />
 
 
     <Button

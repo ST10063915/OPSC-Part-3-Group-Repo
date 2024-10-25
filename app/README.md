@@ -1,198 +1,220 @@
+
 # **One Second App**
-Please see https://github.com/VCDN-2024/opsc7312-part-2-ST10063915/tree/master for full version and github automated testing and workflows
+
+For the full version, including GitHub workflows and automated testing, visit the repository: [One Second App Repository](https://github.com/VCDN-2024/opsc7312-part-2-ST10063915/tree/master)
 
 ## **Overview**
-**One Second App** is a multimedia journaling application designed to help users capture their daily moments through images, text, and videos. The app compiles these moments into a visually engaging timeline, providing a unique and personalized journaling experience. Users can capture photos, videos, and text entries, which are organized by date and accessible in a timeline view. The app offers features like offline mode with sync, multilingual support (English and Afrikaans), biometric authentication, and more.
+
+**One Second App** is a multimedia journaling application that allows users to capture daily moments through photos, text, and videos. Entries are organized by date and accessible in a timeline view, creating a personalized journaling experience. The app supports features like offline mode with sync, multilingual support (English and Afrikaans), biometric authentication, and push notifications.
 
 ## **Features**
 
 ### **Implemented Features**
 
-- **Capture Activity:**
-  - Captures images and stores the `imageUrl`, `userId`, and `timestamp` in Firebase Firestore.
-  - Users can upload images using Firebase Storage.
+-   **User Settings Banner:**
 
-- **Authentication:**
-  - Supports login via Standard Email/Password or SSO (Single Sign-On) using third-party services such as Google.
-  - Users can register, log in, log out, and manage sessions.
+  -   Located in the `activity_home` screen, the settings icon (`@drawable/settings_icon`) is linked to a settings menu (`@id/accountButton`) that includes user settings options.
+-   **User Profile Banner:**
 
-- **Profile Section:**
-  - Users can view and update their profile information.
-  - Features a profile banner with profile photo and email.
-  - Profile settings menu is available with options to log out or change the profile picture (coming part 3).
+  -   Displays the current user's profile information instead of a placeholder.
+-   **Capture Activity:**
 
-- **Image Timeline:**
-  - Users can view their images, organized by month in a timeline view.
-  - Each month shows all images captured during that time.
+  -   Captures and stores images with metadata, including `imageUrl`, `userId`, and `timestamp`, in Firebase Firestore.
+  -   Allows users to upload images directly to Firebase Storage.
+-   **Authentication:**
 
-- **Quick Capture Image:**
-  - Users can quickly capture an image via the Capture Activity.
-  - The image is automatically uploaded to Firebase and stored in the timeline.
+  -   Supports both Standard Email/Password login and Single Sign-On (SSO) with providers like Google.
+  -   Users can register, log in, log out, and manage sessions securely.
+-   **Profile Section:**
 
-- **Settings and Languages:**
-  - Supports multilingual functionality (English and Afrikaans).
-  - Settings for changing language preferences and other profile-related adjustments.
+  -   Users can view and update their profile.
+  -   Options for changing profile photos and basic user settings are available from the profile settings banner.
+-   **Help Center and Contact Support:**
 
-- **SSO Support:**
-  - Allows users to register and log in using third-party services such as Google.
+  -   Accessible Help Center and Contact Support banners are linked to the help button in `activity_home`.
+-   **Import Media Functionality:**
 
-- **Push Notifications:**
-  - Real-time notifications to remind users to capture their daily moments (coming part 3).
+  -   Media import is available on both the home page and settings menu, allowing selection of specific dates for upload.
+-   **Image Timeline:**
 
-- **Syncing with Firebase:**
-  - The app syncs user data (e.g., entries, profile images) with Firebase Firestore and Firebase Storage.
+  -   Displays images in a monthly-organized timeline, allowing easy navigation through months and their respective entries.
+-   **Quick Capture Image:**
 
-- **Offline Mode with Sync:**
-  - Users can capture moments offline, and the app will sync the data once they regain internet connectivity (coming part 3).
+  -   Allows quick image capture from the Capture Activity, with automatic upload and storage of image metadata.
+-   **Settings and Language Support:**
 
----
+  -   Multilingual support in both English and Afrikaans.
+  -   Language and other profile settings adjustments are accessible in the settings menu.
+-   **Push Notifications:**
 
-### **Features In Progress / To Be Implemented (coming part 3)**
+  -   Real-time notifications for events such as successful uploads, pending uploads, and settings changes.
+-   **Firebase Sync:**
 
-- **Profile Photo Change:**
-  Allow users to change their profile photo directly from the profile section in the app.
+  -   Syncs user data, including entries and profile images, to Firebase Firestore and Firebase Storage.
+-   **Offline Mode with Sync:**
 
-- **Fix Profile Image Outline:**
-  Ensure that the black outline around the profile image is visible.
+  -   Supports offline capture, syncing data to Firebase once reconnected.
 
-- **Settings Menu:**
-  Add a profile and app settings pop-up menu under the settings button. Menu options will include "Change Profile Photo" and "Logout."
+----------
 
-- **Backup and Restore:**
-  Implement a feature that allows users to back up their media and restore it on different devices.
+### **Features Added in Part 3**
 
-- **Account Settings:**
-  Enhance account management features, such as changing the password, updating email, etc.
+-   **Profile Photo Change:**
 
-- **Help Center and Contact Support:**
-  Provide users with access to a help center and allow them to contact support within the app.
+  -   Users can change their profile photo directly from the profile section.
+-   **Enhanced Profile Image Outline:**
 
-- **Import Media:**
-  Add the ability to import media files directly from the user’s device into the app.
+  -   Ensures a visible outline around the profile image for improved visibility.
+-   **Expanded Settings Menu:**
 
-- **Entry Filtering:**
-  Implement filters that allow users to search and filter their journal entries based on various tags.
+  -   A settings menu pop-up includes options such as "Change Profile Photo" and "Logout" for easy access.
+-   **Backup and Restore:**
 
-- **Plus Button Menu:**
-  Add a Plus Button Menu with options for adding various types of entries (e.g., photo, video, text).
+  -   Enables media backup and restoration, allowing users to access their timeline on different devices.
+-   **Advanced Account Management:**
 
-- **Notification Screen:**
-  Provide a screen for viewing and managing notifications within the app.
+  -   Users can manage and update account details, such as email and password.
+-   **Comprehensive Help and Contact Support:**
 
-- **Text to Media Uploads:**
-  Allow users to upload text-based entries along with photos and videos.
+  -   Expanded Help Center and Contact Support options, providing users with direct access to assistance.
+-   **Extended Import Media:**
 
-- **Biometric Authentication:**
-  Implement facial recognition and fingerprint authentication for added security.
+  -   Allows users to import multiple media types from their devices directly into the app.
+-   **Entry Filtering and Search:**
 
-- **Customizable Timelines:**
-  Allow users to customize their timeline with captions, background music, and more.
+  -   Users can filter and search journal entries by tags and other criteria for easier organization and retrieval.
+-   **More Settings Options:**
 
-- **Gamification:**
-  Add badges and achievements for consistent journaling activities to motivate users.
+  -   An additional More Settings menu offers custom configuration options for user preferences.
+-   **Notification Management:**
 
-- **Memory Slideshow Creation:**
-  Allow users to create memory slideshows from selected entries, with options for adding music and transitions.
+  -   Users have a notification management screen for viewing and adjusting alert settings.
+-   **Text Entries Support:**
 
----
+  -   Supports text-based journal entries alongside photo and video uploads.
+-   **Biometric Authentication:**
+
+  -   Fingerprint and facial recognition support for secure app access.
+-   **Video Timeline:**
+
+  -   Users can capture and compile daily videos into a timeline, creating a visual diary.
+-   **Multimedia Support:**
+
+  -   Photos, text, and videos can be combined in entries, allowing flexibility in documenting experiences.
+-   **Real-time Notifications:**
+
+  -   Push notifications remind users to make daily entries, with customizable reminder preferences.
+-   **Multi-language Support:**
+
+  -   Includes English and two South African languages, making the app accessible to a wider audience.
+-   **SSO Registration and Login:**
+
+  -   Allows users to log in using Google, Facebook, or Apple, simplifying authentication.
+-   **Customizable Timelines:**
+
+  -   Enables users to create personalized timelines with tags, captions, and background music.
+-   **Gamification:**
+
+  -   Reward system with badges encourages consistent journaling and interaction with the app.
+
+----------
 
 ## **Prerequisites**
 
-Before you start, ensure that you have the following installed:
+Before starting, ensure the following installations are completed:
 
-- Android Studio
-- Firebase Project (Set up with Firestore and Firebase Storage)
-- Firebase Authentication (Standard Email/Password and SSO providers)
-- Java SDK (JDK 8+)
-- Google Play Services (for Firebase Authentication)
+-   **Android Studio**
+-   **Firebase Project** (Set up with Firestore and Firebase Storage)
+-   **Firebase Authentication** (Email/Password and SSO providers)
+-   **Java SDK (JDK 8+)**
+-   **Google Play Services** (for Firebase Authentication)
 
----
+----------
 
 ## **How to Run the Application**
 
 ### **Step 1: Clone the Repository**
+
 ```bash
-git clone <repository-url>
+
+`git clone <gh repo clone VCDN-2024/opsc7312-part-poe-ST10063915>`
 ```
+
 ### **Step 2: Open the Project in Android Studio**
-1. Open Android Studio.
-2. Select **Open an existing project**.
-3. Navigate to the cloned project folder.
-4. Open the project.
+
+1.  Open Android Studio.
+2.  Select **Open an existing project**.
+3.  Navigate to the cloned project folder.
+4.  Open the project.
 
 ### **Step 3: Set Up Firebase**
-1. Create a Firebase Project in the Firebase Console.
-2. Add an Android app to your Firebase project.
-3. Download the `google-services.json` file from the Firebase console and place it in the `app/` directory of your project.
-4. Enable Firebase Authentication, Firestore, and Firebase Storage in the Firebase console.
-5. Configure rules for Firestore and Storage as necessary.
+
+1.  Create a Firebase Project in the Firebase Console.
+2.  Add an Android app to your Firebase project.
+3.  Download the `google-services.json` file from the Firebase console and place it in the `app/` directory of your project.
+4.  Enable Firebase Authentication, Firestore, and Firebase Storage in the Firebase console.
+5.  Configure rules for Firestore and Storage as necessary.
 
 ### **Step 4: Run the Application**
-1. In Android Studio, click on the green **Run** button or use the shortcut `Shift + F10` to build and run the app on your connected device or emulator.
-2. The app should launch, and you can start testing the features.
+
+1.  In Android Studio, click on the green **Run** button or use the shortcut `Shift + F10` to build and run the app on your connected device or emulator.
+2.  The app should launch, and you can start testing the features.
 
 ### **Step 5: Test Firebase Authentication**
+
 You can test logging in and registering through the app’s SSO or email/password authentication. Ensure that you have set up SSO providers in the Firebase console.
 
----
+----------
 
-## **Development Schedule (Features from Part 1)**
+## **Development Schedule and Completed Features**
 
-### **Features Implemented**
+### **Part 3 Features and Updates**
 
-- **Capture Activity:**
-  Users can capture daily images, which are compiled into a timeline.
+-   **Capture Activity:** Users can capture daily images, which are compiled into a timeline.
 
-- **Multimedia Support:**
-  Users can add text, images, and videos to entries (coming part 3).
+-   **Multimedia Support:** Users can add text, images, and videos to entries.
 
-- **Offline Mode:**
-  Users can record entries offline, and they will sync later (coming part 3).
+-   **Offline Mode:** Users can record entries offline, and they will sync later when online.
 
-- **Notifications:**
-  Custom push notifications remind users to capture moments (fully setup in part 3).
+-   **Notifications:** Custom push notifications remind users to capture moments.
 
-- **SSO Login:**
-  Supports email/password login and third-party login via SSO.
+-   **SSO Login:** Supports email/password login and third-party login via SSO.
 
-- **Multilingual Support:**
-  App supports English and Afrikaans.
+-   **Multilingual Support:** App supports English and Afrikaans, as well as other South African languages.
 
-- **REST API:**
-  Connected to REST API that is connected to a database.
-
----
-
-### **Features To Be Completed**
-
-- **Backup and Restore:**
-  Feature for restoring media and timeline entries across devices.
-
-- **Biometric Authentication:**
-  Add fingerprint and facial recognition for secure login.
-
-- **Memory Slideshow:**
-  Generate memory slideshows from entries with music and effects.
-
-- **Gamification:**
-  Implement achievements and badges for consistent journaling.
-
-- **UI Responsiveness:**
-  Implement a responsive and adaptable design to allow multiple devices
+-   **REST API:** Connected to REST API that communicates with a cloud database.
 
 
----
+----------
 
-## **Demonstration Video (must contain voice over)**
+### **Planned Features and Enhancements**
+
+-   **Backup and Restore:** Enables media and timeline entry restoration on new devices.
+
+-   **Advanced Biometric Authentication:** Adds fingerprint and facial recognition for secure login.
+
+-   **Memory Slideshow:** Allows users to create memory slideshows from entries, with music and effects.
+
+-   **Gamification:** Adds achievements and badges for consistent journaling.
+
+-   **Responsive Design:** Implements a responsive design to enhance user experience across devices.
+
+
+----------
+
+## **Demonstration Video**
 
 The following features are shown in the demo video:
-- Login with SSO and standard login.
-- Creating an account.
-- Profile Section with notification and profile settings bar.
-- Settings bar with language change, etc.
-- Timeline images by month.
-- Quick Capture Image and add it to the current month.
-- Timeline overview by month.
-- Add media to the selected timeline month from the timeline overview.
 
----
+-   Login with SSO, standard login or biometric .
+-   Registering an account.
+-   Profile section and notification bar.
+-   Import images via Home page or in selected category 
+-   Settings bar with language change and other preferences.
+-   Monthly timeline of images.
+-   Quick Capture Image feature and image upload.
+-   Timeline overview by month.
+-   Media import functionality by month from the timeline overview.
+-   Adjust user profile settings 
+-   contact support, help center and other settings have been enabled
+-   Notifications have been enabled

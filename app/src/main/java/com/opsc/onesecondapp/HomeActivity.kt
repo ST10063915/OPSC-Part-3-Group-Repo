@@ -1,6 +1,7 @@
 package com.opsc.onesecondapp
 
 import TimelineAdapter
+import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -187,7 +188,7 @@ class HomeActivity : AppCompatActivity() {
         }
 
         if(notifications){
-            sendNotification("Welcome To the One Second App!")
+            sendNotification(if (isEnglish) "Welcome to the One Second App!" else "Welkom by die One Second App!")
         }
 
 
@@ -301,13 +302,80 @@ class HomeActivity : AppCompatActivity() {
         }
 
         changeUsernameText.setOnClickListener {
-            Toast.makeText(this, if (isEnglish) "Change Username" else "Verander Gebruikersnaam", Toast.LENGTH_SHORT).show()
-            // Logic to change username goes here
+            val user = auth.currentUser
+            val providerData = user?.providerData?.map { it.providerId }
+
+            if (providerData != null && providerData.contains("password")) {
+                // Only allow change if logged in with email/password
+                val usernameInput = EditText(this)
+                usernameInput.hint = if (isEnglish) "Enter new username" else "Voer nuwe gebruikersnaam in"
+
+                AlertDialog.Builder(this)
+                    .setTitle(if (isEnglish) "Change Username" else "Verander Gebruikersnaam")
+                    .setView(usernameInput)
+                    .setPositiveButton(if (isEnglish) "Submit" else "Dien in") { _, _ ->
+                        val newUsername = usernameInput.text.toString()
+                        if (newUsername.isNotEmpty()) {
+                            firestore.collection("users").document(user.uid)
+                                .update("username", newUsername)
+                                .addOnSuccessListener {
+                                    Toast.makeText(this, if (isEnglish) "Username updated successfully" else "Gebruikersnaam suksesvol opgedateer", Toast.LENGTH_SHORT).show()
+                                    nameTextView.text = newUsername
+                                }
+                                .addOnFailureListener {
+                                    Toast.makeText(this, if (isEnglish) "Failed to update username" else "Kon nie gebruikersnaam opdateer nie", Toast.LENGTH_SHORT).show()
+                                }
+                        } else {
+                            Toast.makeText(this, if (isEnglish) "Username cannot be empty" else "Gebruikersnaam kan nie leeg wees nie", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                    .setNegativeButton(if (isEnglish) "Cancel" else "Kanselleer", null)
+                    .show()
+            } else {
+                Toast.makeText(this, if (isEnglish) "Username change only available for email login" else "Gebruikersnaamverandering is slegs beskikbaar vir e-posaanmelding", Toast.LENGTH_SHORT).show()
+            }
         }
 
         changeEmailText.setOnClickListener {
-            Toast.makeText(this, if (isEnglish) "Change Email" else "Verander E-pos", Toast.LENGTH_SHORT).show()
-            // Logic to change email goes here
+            val user = auth.currentUser
+            val providerData = user?.providerData?.map { it.providerId }
+
+            if (providerData != null && providerData.contains("password")) {
+                // Only allow change if logged in with email/password
+                val emailInput = EditText(this)
+                emailInput.hint = if (isEnglish) "Enter new email" else "Voer nuwe e-pos in"
+
+                AlertDialog.Builder(this)
+                    .setTitle(if (isEnglish) "Change Email" else "Verander E-pos")
+                    .setView(emailInput)
+                    .setPositiveButton(if (isEnglish) "Submit" else "Dien in") { _, _ ->
+                        val newEmail = emailInput.text.toString()
+                        if (newEmail.isNotEmpty()) {
+                            user.updateEmail(newEmail)
+                                .addOnCompleteListener { task ->
+                                    if (task.isSuccessful) {
+                                        firestore.collection("users").document(user.uid)
+                                            .update("email", newEmail)
+                                            .addOnSuccessListener {
+                                                Toast.makeText(this, if (isEnglish) "Email updated successfully" else "E-pos suksesvol opgedateer", Toast.LENGTH_SHORT).show()
+                                                emailTextView.text = newEmail
+                                            }
+                                            .addOnFailureListener {
+                                                Toast.makeText(this, if (isEnglish) "Failed to update email in Firestore" else "Kon nie e-pos in Firestore opdateer nie", Toast.LENGTH_SHORT).show()
+                                            }
+                                    } else {
+                                        Toast.makeText(this, if (isEnglish) "Failed to update email" else "Kon nie e-pos opdateer nie", Toast.LENGTH_SHORT).show()
+                                    }
+                                }
+                        } else {
+                            Toast.makeText(this, if (isEnglish) "Email cannot be empty" else "E-pos kan nie leeg wees nie", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                    .setNegativeButton(if (isEnglish) "Cancel" else "Kanselleer", null)
+                    .show()
+            } else {
+                Toast.makeText(this, if (isEnglish) "Email change only available for email login" else "E-posverandering is slegs beskikbaar vir e-posaanmelding", Toast.LENGTH_SHORT).show()
+            }
         }
 
 
@@ -690,8 +758,7 @@ class HomeActivity : AppCompatActivity() {
         firestore.collection("users").document(userId).collection("timeline")
             .add(entryData)
             .addOnSuccessListener {
-                val message = if (isEnglish) "Image metadata saved" else "Beeldmetadata gestoor"
-                Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+
 
                 loadImagesForMonth(selectedDate)
             }
